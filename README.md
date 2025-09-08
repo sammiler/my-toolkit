@@ -22,7 +22,7 @@ This is the core of my digital brain, designed for long-term knowledge retention
 
 | Role | Toolchain | Purpose |
 | :--- | :--- | :--- |
-| 📚 **Personal Library** | **Zotero + Nextcloud** | For collecting, organizing, and annotating high-quality source materials (PDFs, web pages). |
+| 📚 **Personal Library** | **Zotero + hacdias/webdav** | For collecting, organizing, and annotating high-quality source materials (PDFs, web pages). |
 | 🧠 **Second Brain** | **Trilium Notes** | For synthesizing, linking, and creating my own networked knowledge base. |
 
 #### Workflow in a Nutshell:

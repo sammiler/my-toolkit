@@ -17,13 +17,13 @@
 
 ### 工具详解
 
-#### 📚 个人图书馆: [Zotero](https://www.zotero.org/) + [Nextcloud](https://nextcloud.com/)
+#### 📚 个人图书馆: [Zotero](https://www.zotero.org/)
 
 *   **Zotero**: 管理所有原始资料的中央枢纽。
     *   **为何选择Zotero?**: 它是开源、非营利的，并拥有一个极其强大的浏览器插件，可以一键抓取网页、文章和PDF。它能完美处理元数据。
     *   **我的配置**: 我使用 Zotero 桌面客户端。元数据通过 Zotero 官方的免费服务同步，该服务非常可靠。
-*   **Nextcloud**: 我自托管的文件存储后端。
-    *   **为何选择Nextcloud?**: 它提供了一个健壮的 WebDAV 服务器。我所有的PDF和网页快照都通过 WebDAV 同步到我自己的VPS上，这让我拥有完全的数据所有权和无限的存储空间。
+*   **hacdias/webdav**: 我自托管的文件存储后端。
+    *   **为何选择hacdias/webdav?**: 它提供了一个健壮的 WebDAV 服务器。我所有的PDF和网页快照都通过 WebDAV 同步到我自己的VPS上，这让我拥有完全的数据所有权和无限的存储空间。
 
 #### 🧠 第二大脑: [Trilium Notes](https://github.com/zadam/trilium)
 
@@ -37,7 +37,7 @@
 
 ### 完整工作流：一个实例演示
 
-1.  **捕获**: 我发现一篇关于 C++ Concepts 的有趣文章。我点击浏览器中的 Zotero 插件，文章的元数据和完整的离线快照就被保存到了 Zotero。快照文件会自动上传到我的 Nextcloud 服务器。
+1.  **捕获**: 我发现一篇关于 C++ Concepts 的有趣文章。我点击浏览器中的 Zotero 插件，文章的元数据和完整的离线快照就被保存到了 Zotero。快照文件会自动上传到我的 hacdias/webdav 服务器。
 2.  **消化**: 稍后，我打开 Zotero 阅读这篇文章。我使用内置的阅读器高亮关键句子，并添加批注。
 3.  **创造**: 我打开 Trilium，在我的 "C++ 编程" 父笔记下，创建一条名为 "C++ Concepts 解析" 的新笔记。
 4.  **提炼**: 我**不会直接复制粘贴**。而是看着 Zotero 中的高亮，**用我自己的话**，将核心思想总结到 Trilium 笔记中。

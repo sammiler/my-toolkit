@@ -17,13 +17,13 @@ I view knowledge management as a two-stage process:
 
 ### The Tools in Detail
 
-#### 📚 Personal Library: [Zotero](https://www.zotero.org/) + [Nextcloud](https://nextcloud.com/)
+#### 📚 Personal Library: [Zotero](https://www.zotero.org/)
 
 *   **Zotero**: My central hub for managing all source materials.
     *   **Why Zotero?**: It's open-source, non-profit, and has an incredible browser connector for one-click capture of web pages, articles, and PDFs. It handles metadata flawlessly.
     *   **My Setup**: I use the Zotero desktop client. Metadata is synced via Zotero's free service, which is highly reliable.
-*   **Nextcloud**: My self-hosted backend for file storage.
-    *   **Why Nextcloud?**: It provides a robust WebDAV server. All my PDFs and web snapshots are synced to my own VPS via WebDAV, giving me full data ownership and unlimited storage.
+*   **hacdias/webdav**: My self-hosted backend for file storage.
+    *   **Why hacdias/webdav?**: It provides a robust WebDAV server. All my PDFs and web snapshots are synced to my own VPS via WebDAV, giving me full data ownership and unlimited storage.
 
 #### 🧠 Second Brain: [Trilium Notes](https://github.com/zadam/trilium)
 
@@ -37,7 +37,7 @@ I view knowledge management as a two-stage process:
 
 ### The Complete Workflow: A Step-by-Step Example
 
-1.  **Capture**: I find an interesting article on C++ Concepts. I click the Zotero Connector in my browser. The article's metadata and a full offline snapshot are saved to Zotero. The snapshot file is automatically uploaded to my Nextcloud server.
+1.  **Capture**: I find an interesting article on C++ Concepts. I click the Zotero Connector in my browser. The article's metadata and a full offline snapshot are saved to Zotero. The snapshot file is automatically uploaded to my hacdias/webdav server.
 2.  **Consume**: Later, I open Zotero and read the article. I use the built-in reader to highlight key sentences and add annotations.
 3.  **Create**: I open Trilium. I create a new note titled "C++ Concepts Explained" under my "C++ Programming" parent note.
 4.  **Synthesize**: I **do not copy-paste**. I read my highlights in Zotero and, **in my own words**, summarize the core ideas into my Trilium note.
