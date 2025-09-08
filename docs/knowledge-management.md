@@ -1,3 +1,7 @@
+<p align="right">
+  <a href="./knowledge-management.md">English</a> | <a href="./knowledge-management_zh-CN.md">简体中文</a>
+</p>
+
 # 🧠 My Knowledge Management System: A Deep Dive
 
 This document provides a detailed breakdown of the philosophy, tools, and workflow behind my knowledge management system, which was summarized on the main `README.md`.
