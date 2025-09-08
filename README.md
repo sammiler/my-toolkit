@@ -10,14 +10,21 @@ This repository serves as a living document of my personal toolkit. It's a curat
 
 ---
 
+---
+
 ## 🧠 Knowledge Management
 
-This is the core of my digital brain, designed for long-term knowledge retention and creation with a strong focus on data ownership.
+This is the core of my digital brain, designed for long-term knowledge retention and creation with a strong focus on data ownership. My system is built around two key concepts: a **Personal Library** for collecting raw information and a **Second Brain** for synthesizing it into personal knowledge.
 
 | Role | Toolchain | Purpose |
 | :--- | :--- | :--- |
 | 📚 **Personal Library** | **Zotero + Nextcloud** | For collecting, organizing, and annotating high-quality source materials (PDFs, web pages). |
 | 🧠 **Second Brain** | **Trilium Notes** | For synthesizing, linking, and creating my own networked knowledge base. |
+
+#### Workflow in a Nutshell:
+My process is simple yet powerful: information flows from the outside world into my **Library (Zotero)**, where I read and digest it. Then, the distilled insights and my own thoughts are permanently forged into interconnected notes within my **Second Brain (Trilium)**.
+
+**➡️ [Dive deeper into my Knowledge Management System, workflow, and setup](./docs/knowledge-management.md)**
 
 ---
 
@@ -27,9 +34,9 @@ My primary setup for writing code. I value simplicity, speed, and a consistent e
 
 #### Core Editor & IDE
 *   **Editor**: [Visual Studio Code](https://code.visualstudio.com/) - My go-to for almost everything.
-    *   **Theme**: One Dark Pro
-    *   **Font**: Fira Code (with ligatures)
-    *   **Key Extensions**: `C/C++ Extension Pack`, `CMake Tools`, `GitLens`, `Prettier`.
+    *   **Theme**: One Dark Pro Night Flat
+    *   **Font**:  Maple Mono NF
+    *   **Account**: `sammiler`
 *   **IDE**: [Visual Studio 2022 Community](https://visualstudio.microsoft.com/) - For heavy-duty C++ debugging and Windows development.
 *   **IDE (JetBrains)**: CLion / Rider (depending on the project).
 
