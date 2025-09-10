@@ -41,3 +41,14 @@ My infrastructure philosophy is built on three pillars: **Stability, Simplicity,
 *   **Effortless Setup**: Adding a new monitor (HTTP, Ping, Port, etc.) is straightforward and done entirely through the UI.
 *   **Rich Notification Channels**: It supports dozens of notification methods (Telegram, Discord, Email, and more), ensuring I am the first to know if a service becomes unavailable.
 *   **Aesthetic Status Pages**: It allows for the creation of public or private status pages that beautifully visualize the health of all my services—a very satisfying feature.
+---
+
+### 🚢 Helm: Portainer
+
+**Why I chose it**: While the command line is powerful, a robust graphical interface is invaluable for day-to-day management, quick troubleshooting, and getting a clear overview of the environment. Portainer is the de facto standard for Docker Web UIs, offering comprehensive control over every aspect of the container ecosystem.
+
+**Core Advantages**:
+*   **Full Environment Management**: It provides a single pane of glass to manage containers, images, volumes, networks, and, most importantly, stacks (docker-compose files).
+*   **Simplified Operations**: Actions like pulling an image, restarting a container, checking logs, or accessing a container's console become simple clicks in a web browser, which is far more efficient for quick tasks than SSHing and typing commands.
+*   **Stack Management**: Its ability to deploy, edit, and manage `docker-compose.yml` files directly from the UI is a killer feature, streamlining the entire application lifecycle management process.
+*   **Resource Monitoring**: Built-in, real-time stats for each container help me instantly identify which services are consuming the most CPU or memory.
