@@ -70,6 +70,21 @@ This is my private cloud, handling personal data from files to precious memories
 **➡️ [Learn more about my Personal Cloud Services](./docs/personal-cloud.md)**
 
 ---
+---
+
+### 💾 Data Orchestration & Backup
+
+This layer represents the nervous system of my data, responsible for secure backups, remote access, and seamless integration between my VPS and various cloud storage backends. This is where data resilience and accessibility are forged.
+
+| Role | Toolchain | Purpose |
+| :--- | :--- | :--- |
+| 🛡️ **Archivist** | **Kopia / Restic** | The master archivists, creating encrypted, deduplicated, and versioned backups of all critical data. |
+| 🔗 **Connector** | **Rclone** | The universal translator, enabling access to a vast array of cloud storage services with a unified interface. |
+| 🪩 **Mount Point** | **CloudDrive / Openlist** | The magic gateways that mount various cloud drives as local-like folders, simplifying data access. |
+
+**➡️ [Learn more about my Data Orchestration & Backup Strategy](./docs/data-orchestration-and-backup.md)**
+
+---
 
 ### 🛠️ Utilities & Gateways
 
