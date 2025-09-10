@@ -2,47 +2,95 @@
   <a href="./README.md">English</a> | <a href="./README_zh-CN.md">简体中文</a>
 </p>
 
-# 🛠️ My Toolkit
+# 🏰 My Digital Citadel
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status: Actively Maintained](https://img.shields.io/badge/Status-Actively%20Maintained-brightgreen)](https://github.com/your-username/my-toolkit)
-[![Last Updated](https://img.shields.io/github/last-commit/sammiler/my-toolkit)](https://github.com/your-username/my-toolkit/commits/main)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Status: Evolving](https://img.shields.io/badge/Status-Evolving-brightgreen)](https://github.com/your-username/my-citadel)
+[![Docker Powered](https://img.shields.io/badge/Powered%20By-Docker-blue?logo=docker)](https://www.docker.com/)
 
-> "We become what we behold. We shape our tools, and thereafter our tools shape us." - Marshall McLuhan
+> "The ultimate promise of technology is to make us masters of a world that we command by the push of a button." - Volker Grassmuck
 
-This repository serves as a living document of my personal toolkit. It's a curated list of the software, hardware, and configurations I use daily for development, learning, and creation.
-
----
+This repository is the architectural blueprint for my personal digital citadel, a self-hosted ecosystem running on a private VPS. It documents the services I run, the philosophy behind my choices, and the workflows that connect them, all with a core focus on data ownership, privacy, and long-term utility.
 
 ---
 
-## 🧠 Knowledge Management
+## 🏛️ Service Architecture
 
-This is the core of my digital brain, designed for long-term knowledge retention and creation with a strong focus on data ownership. My system is built around two key concepts: a **Personal Library** for collecting raw information and a **Second Brain** for synthesizing it into personal knowledge.
+My services are organized into logical layers, from foundational infrastructure to specialized workflows. Each component is containerized using Docker for portability, isolation, and ease of management.
+
+### 🛡️ Infrastructure & Security
+
+This is the bedrock of the citadel, ensuring all services are accessible, secure, and observable. Its stability is paramount.
 
 | Role | Toolchain | Purpose |
 | :--- | :--- | :--- |
-| 📚 **Personal Library** | **Zotero + hacdias/webdav** | For collecting, organizing, and annotating high-quality source materials (PDFs, web pages). |
+| 🚪 **Gateway** | **Nginx Proxy Manager** | The single, secure entry point for all services, handling SSL and routing. |
+| 🔑 **Vault** | **Vaultwarden** | A hardened, self-hosted vault for all my digital credentials. |
+| 🔭 **Watchtower** | **Uptime Kuma** | The vigilant eye, monitoring the health and uptime of every service. |
+
+**➡️ [Learn more about my Infrastructure & Security setup](./docs/infrastructure-and-security.md)**
+
+---
+
+### 🧠 Knowledge Management
+
+The core of my digital brain, designed for long-term knowledge retention and creation. This system separates the collection of raw materials from the synthesis of personal knowledge.
+
+| Role | Toolchain | Purpose |
+| :--- | :--- | :--- |
+| 📚 **Library** | **Zotero + hacdias/webdav** | For collecting, organizing, and annotating high-quality source materials (PDFs, web pages). |
 | 🧠 **Second Brain** | **Trilium Notes** | For synthesizing, linking, and creating my own networked knowledge base. |
 
-#### Workflow in a Nutshell:
-My process is simple yet powerful: information flows from the outside world into my **Library (Zotero)**, where I read and digest it. Then, the distilled insights and my own thoughts are permanently forged into interconnected notes within my **Second Brain (Trilium)**.
-
-**➡️ [Dive deeper into my Knowledge Management System, workflow, and setup](./docs/knowledge-management.md)**
+**➡️ [Learn more about my Knowledge Management System](./docs/knowledge-management.md)**
 
 ---
 
-## 💻 Development Environment
+### 🌊 Information Intake & Processing
 
-My primary setup for writing code. I value simplicity, speed, and a consistent experience across different machines.
+This layer acts as my filter and funnel for the vast ocean of online information, turning chaotic streams into structured input for my knowledge base.
 
-#### Core Editor & IDE
-*   **Editor**: [Visual Studio Code](https://code.visualstudio.com/) - My go-to for almost everything.
-    *   **Theme**: One Dark Pro Night Flat
-    *   **Font**:  Maple Mono NF
-    *   **Account**: `sammiler`
-*   **IDE**: [Visual Studio 2022 Community](https://visualstudio.microsoft.com/) - For heavy-duty C++ debugging and Windows development.
-*   **IDE (JetBrains)**: CLion / Rider (depending on the project).
+| Role | Toolchain | Purpose |
+| :--- | :--- | :--- |
+| 📡 **Radar** | **FreshRSS** | An active radar for high-quality information, pulling from trusted sources without algorithmic noise. |
+| 🍵 **Reading Room** | **Wallabag** | A quiet space for deep reading, stripping away distractions from articles saved for later. |
 
+**➡️ [Learn more about my Information Intake Workflow](./docs/information-intake.md)**
 
 ---
+
+### ☁️ Personal Cloud & Data
+
+This is my private cloud, handling personal data from files to precious memories, ensuring complete ownership and privacy.
+
+| Role | Toolchain | Purpose |
+| :--- | :--- | :--- |
+| 📦 **Sync Drive** | **Nextcloud** | The versatile workhorse for file synchronization, calendars, and contacts across all my devices. |
+| 🖼️ **Memories** | **Immich** | An intelligent, private gallery for a lifetime of photos and videos, with automatic mobile backup. |
+
+**➡️ [Learn more about my Personal Cloud Services](./docs/personal-cloud.md)**
+
+---
+
+### 🛠️ Utilities & Gateways
+
+A collection of powerful tools that enhance my digital life, from anonymous web exploration to video archiving.
+
+| Role | Toolchain | Purpose |
+| :--- | :--- | :--- |
+| 🎭 **Anonymous Portal** | **SearXNG** | My private gateway to the web, fetching aggregated search results without tracking. |
+| 📼 **Video Archiver** | **MeTube** | A server-side tool to permanently archive valuable videos from the web. |
+| 🗃️ **Code Archive** | **Gitea** | A lightweight, fast forge for my personal code, scripts, and configurations. |
+
+**➡️ [Learn more about my Utilities & Gateways](./docs/utilities-and-gateways.md)**
+
+---
+
+### 🖥️ The Dashboard
+
+The grand foyer of my citadel, providing a single pane of glass to access and view the status of all services.
+
+| Role | Toolchain | Purpose |
+| :--- | :--- | :--- |
+| 🧭 **Control Panel** | **Homepage** | A beautiful, highly integrated dashboard that serves as my launchpad and system overview. |
+
+**➡️ [Learn more about my Dashboard Philosophy](./docs/dashboard.md)**
