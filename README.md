@@ -96,6 +96,7 @@ A collection of powerful tools that enhance my digital life, from anonymous web 
 | 🎭 **Anonymous Portal** | **SearXNG** | My private gateway to the web, fetching aggregated search results without tracking. |
 | 📼 **Video Archiver** | **MeTube** | A server-side tool to permanently archive valuable videos from the web. |
 | 🗃️ **Code Archive** | **Gitea** | A lightweight, fast forge for my personal code, scripts, and configurations. |
+| ⭐ **Code Curator** | **GitHub Stars Manager** | An AI-powered dashboard to automatically sync, summarize, and categorize starred GitHub repos for easy discovery and release tracking. |
 
 **➡️ [Learn more about my Utilities & Gateways](./docs/utilities-and-gateways.md)**
 

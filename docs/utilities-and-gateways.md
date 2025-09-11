@@ -44,3 +44,18 @@ This category comprises a set of specialized tools that serve as my personal gat
 
 **Alternatives Considered**:
 *   `GitLab`: An all-in-one DevOps platform. It is immensely powerful but also incredibly resource-heavy (requiring 4GB+ RAM just to idle). For personal projects, GitLab is overkill; Gitea provides the perfect balance of features and performance.
+
+---
+
+### ⭐ Code Curator: GitHub Stars Manager
+
+**Why I chose it**: GitHub stars are a fantastic way to bookmark interesting projects, but they quickly become a chaotic, unsearchable black hole. Manual curation with lists is tedious and unsustainable. GitHub Stars Manager solves this by transforming my star history into an intelligent, searchable database. It acts as an automated curator, ensuring the valuable projects I discover are never lost.
+
+**Core Advantages**:
+*   **Automated Syncing**: Connects directly to my GitHub account to automatically pull in all starred repositories, new and old.
+*   **AI-Powered Curation**: Uses AI to generate concise README summaries, tags, and relevant topics, saving hours of manual categorization.
+*   **Semantic Search**: Allows me to find repositories based on what I *mean*, not just exact keywords, making discovery incredibly intuitive.
+*   **Integrated Release Tracking**: Monitors repositories for new releases and provides one-click, filtered asset downloads (e.g., finding the `arm64.dmg` file instantly).
+
+**Alternatives Considered**:
+*   **Manual Tagging / GitHub Lists**: These methods are entirely manual, do not scale well, and lack features like AI summaries or release tracking. They require constant discipline rather than providing an automated solution.
