@@ -22,6 +22,22 @@ This category comprises a set of specialized tools that serve as my personal gat
 
 ---
 
+### 🚀 Hyperspace Tunnel: Hysteria
+
+**Why I chose it**: In an era of network degradation and increasing internet fragmentation, I need a connection that is not only open but also exceptionally fast and resilient. Hysteria provides a high-performance tunnel designed to thrive in challenging network conditions, ensuring a smooth and unrestricted connection to the global internet.
+
+**Core Advantages**:
+*   **Built on QUIC Protocol**: Hysteria leverages the QUIC protocol (the basis for HTTP/3), which offers superior performance on unstable networks with high latency or packet loss. It establishes connections faster and avoids head-of-line blocking issues inherent to TCP.
+*   **Advanced Censorship Resistance**: Its traffic is designed to masquerade as standard HTTP/3 traffic, making it incredibly difficult to detect and block without causing collateral damage to legitimate web services. The built-in `masquerade` feature provides a robust defense against active probing.
+*   **Exceptional Throughput**: It's engineered for speed, with a modern congestion control algorithm that allows it to rapidly saturate available bandwidth, providing a noticeably faster and more responsive experience, especially for high-bandwidth tasks.
+*   **Self-Contained Certificate Management**: It can handle its own Let's Encrypt certificate acquisition via the DNS challenge, making it independent of other services like Nginx Proxy Manager for its core security and simplifying deployment.
+
+**Alternatives Considered**:
+*   `WireGuard`: An excellent, fast, and modern VPN protocol. However, its distinct UDP signature can be an easy target for blocking by sophisticated firewalls without additional obfuscation layers.
+*   `V2Ray/Xray (TCP+TLS)`: The robust and reliable industry standard for circumvention. While extremely effective, I chose Hysteria for its superior performance on weak or high-latency networks where TCP-based protocols can struggle.
+
+---
+
 ### 📼 Video Archiver: MeTube
 
 **Why I chose it**: The web is ephemeral. Valuable video content on platforms like YouTube or Bilibili can disappear without notice. MeTube provides a simple, server-side interface for `yt-dlp`, the definitive tool for archiving online videos.
