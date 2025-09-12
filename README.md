@@ -24,7 +24,7 @@ This is the bedrock of the citadel, ensuring all services are accessible, secure
 
 | Role | Toolchain | Purpose |
 | :--- | :--- | :--- |
-| 🚪 **Gateway** | **Nginx Proxy Manager** | The single, secure entry point for all services, handling SSL and routing. |
+| 🚪 **Gateway** | **Cloudflare Tunnels** | The single, secure entry point for all services, handling SSL and routing. |
 | 🔑 **Vault** | **Vaultwarden** | A hardened, self-hosted vault for all my digital credentials. |
 | 🔭 **Watchtower** | **Uptime Kuma** | The vigilant eye, monitoring the health and uptime of every service. |
 | 🚢 **Helm** | **Portainer** | The command deck, providing a powerful web UI to manage the entire Docker fleet. |

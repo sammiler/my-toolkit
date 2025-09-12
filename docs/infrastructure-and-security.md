@@ -8,17 +8,17 @@ My infrastructure philosophy is built on three pillars: **Stability, Simplicity,
 
 ---
 
-### 🚪 Gateway: Nginx Proxy Manager (NPM)
+### 🚪 Gateway: Cloudflare Tunnels
 
-**Why I chose it**: Among contenders like Traefik and Caddy, I chose NPM because it strikes the perfect balance for a personal self-hosting setup. It combines the power of Nginx reverse proxying with the simplicity of Let's Encrypt's automated SSL certificate management, all through an incredibly intuitive web interface. This significantly reduces the cognitive load of configuration.
+**Why I chose it**: For a truly private digital citadel, the primary goal is not just to secure services but to make the server itself invisible. I chose Cloudflare Tunnels over traditional reverse proxies like NPM or Caddy because it perfectly embodies the "Zero Trust" security model. It allows me to expose services to the internet without opening a single inbound port on my server's firewall.
 
 **Core Advantages**:
-*   **GUI-Based Management**: There's no need to manually edit complex Nginx configuration files. Adding a new subdomain-based service is a point-and-click process.
-*   **Automated SSL**: It has full, built-in support for Let's Encrypt, allowing for automatic acquisition and renewal of SSL certificates, with HTTPS enforced by default.
-*   **Access Control Lists (ACLs)**: It provides an easy way to add a layer of HTTP Basic Authentication to any service, offering an extra blanket of security for internal or sensitive applications.
+*   **Zero-Attack-Surface Infrastructure**: The `cloudflared` daemon creates a secure, outbound-only connection to Cloudflare's network. This means my server has **no open ports** (like 80 or 443), making it completely invisible to public scanners and immune to direct network attacks like DDoS.
+*   **IP Address Obfuscation**: My server's true IP address is never exposed to the public. All DNS records point to Cloudflare, providing a powerful layer of anonymity and protection.
+*   **Integrated Access Control**: Cloudflare Tunnels seamlessly integrates with **Cloudflare Access**, allowing me to layer on robust, identity-based authentication (e.g., email PIN codes, Google/GitHub SSO) in front of any application. This ensures that only I can reach the login pages of my sensitive services.
 
 **Alternatives Considered**:
-*   `Traefik`/`Caddy`: These are more powerful, especially with their automated service discovery via Docker labels. However, their configuration (whether through labels or files) presents a steeper learning curve. For a personal VPS with a relatively static set of services, the simplicity of NPM is a clear winner.
+*   `Nginx Proxy Manager`/`Caddy`: These are excellent reverse proxies for traditional IP-exposed setups. However, they require opening ports on the firewall, which fundamentally contradicts the goal of building a truly hidden, zero-trust environment. For services requiring ultimate privacy and security, the "invisible server" model of Cloudflare Tunnels is unbeatable.
 
 ---
 
