@@ -34,9 +34,9 @@
 
 *   **为何选择 Uptime Kuma?**: 它提供了我服务的“外部视角”。它是我警惕的守卫，监控着每一个对外暴露的服务以确保其正常响应。其丰富的通知系统确保一旦有服务宕机，我能第一时间知晓。
 
-#### 🩺 医师: [Netdata](https://www.netdata.cloud/)
+#### 🩺 医师: [Prometheus + Grafana + Node Exporter](https://www.netdata.cloud/)
 
-*   **为何选择 Netdata?**: 它提供了至关重要的“内部视角”。Uptime Kuma 告诉我服务*是否*宕机，而 Netdata 则告诉我*为什么*。它能实时自动发现并监控一切，从宿主操作系统的CPU到单个Docker容器，这对于排查问题至关重要。
+*   **为何选择 Prometheus + Grafana + Node Exporter?**: 它提供了关键的“指标管道”。Uptime Kuma 告诉我服务是否宕机，而 Prometheus 则能告诉我系统在一段时间内是如何运行的。Node Exporter 负责暴露宿主机的核心指标（CPU、内存、磁盘、网络），Prometheus 定时抓取并存储为时间序列数据，Grafana 则通过灵活的可视化面板展示出来。这个组合既能实时监控，又能进行历史分析，对于发现性能趋势、排查资源瓶颈以及进行容量规划都至关重要。
 
 #### ⚙️ 军需官: [Watchtower](https://containrrr.dev/watchtower/)
 

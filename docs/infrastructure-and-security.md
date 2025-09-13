@@ -34,9 +34,9 @@ The security and stability of the entire citadel rest on this foundation. My app
 
 *   **Why Uptime Kuma?**: It provides the "external view" of my services. It's my vigilant guard, watching over every exposed service to ensure it's responsive. Its rich notification system ensures I'm the first to know if anything goes down.
 
-#### 🩺 Physician: [Netdata](https://www.netdata.cloud/)
+#### 🩺 Physician: [Prometheus + Grafana + Node Exporter](https://www.netdata.cloud/)
 
-*   **Why Netdata?**: It provides the critical "internal view." While Uptime Kuma tells me *if* a service is down, Netdata tells me *why*. It auto-discovers and monitors everything in real-time, from the host OS's CPU to individual Docker containers, which is invaluable for troubleshooting.
+*   **Why Prometheus + Grafana + Node Exporter?**: It provides the critical "metrics pipeline." While Uptime Kuma tells me if a service is down, Prometheus tells me how the system is behaving over time. Node Exporter exposes host-level metrics (CPU, memory, disk, network), Prometheus scrapes and stores them as time series, and Grafana visualizes them with flexible dashboards. This stack is invaluable for both real-time monitoring and historical analysis, making it possible to spot performance trends, debug resource bottlenecks, and plan capacity ahead.
 
 #### ⚙️ Quartermaster: [Watchtower](https://containrrr.dev/watchtower/)
 

@@ -28,7 +28,7 @@
 | 🚦 **调度员 (Dispatcher)** | **Pangolin** | 内部交通指挥，一个将请求路由到正确服务的反向代理。 |
 | 🔑 **金库 (Vault)** | **Vaultwarden** | 一个强化的、自托管的保险库，用于存放我所有的数字凭证。 |
 | 🔭 **哨兵 (Sentinel)** | **Uptime Kuma** | 警惕的守卫，监控每个对外服务的健康状况和在线时间。 |
-| 🩺 **医师 (Physician)** | **Netdata** | 城堡的医师，为系统和应用健康提供实时、高精度的诊断。 |
+| 🩺 **医师 (Physician)** | **Prometheus + Grafana + Node Exporter** | 城堡的医师，为系统和应用健康提供实时、高精度的诊断。 |
 | ⚙️ **军需官 (Quartermaster)** | **Watchtower** | 勤勉的供给官，确保所有服务都自动更新到最新的安全版本。 |
 | 🚢 **舵手 (Helm)** | **Portainer** | 指挥甲板，提供一个强大的Web界面来管理整个Docker舰队。 |
 

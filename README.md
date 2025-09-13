@@ -28,7 +28,7 @@ This is the bedrock of the citadel, ensuring all services are accessible, secure
 | 🚦 **Dispatcher** | **Pangolin** | The internal traffic director; a reverse proxy that routes requests to the correct service. |
 | 🔑 **Vault** | **Vaultwarden** | A hardened, self-hosted vault for all my digital credentials. |
 | 🔭 **Sentinel** | **Uptime Kuma** | The vigilant guard, monitoring the health and uptime of every external service. |
-| 🩺 **Physician** | **Netdata** | The citadel's physician, providing real-time diagnosis of system and application health. |
+| 🩺 **Physician** | **Prometheus + Grafana + Node Exporter** | The citadel's physician, providing real-time diagnosis of system and application health. |
 | ⚙️ **Quartermaster** | **Watchtower** | The diligent provisioner, ensuring all services are kept up-to-date with the latest secure versions. |
 | 🚢 **Helm** | **Portainer** | The command deck, providing a powerful web UI to manage the entire Docker fleet. |
 
