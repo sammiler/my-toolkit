@@ -24,10 +24,12 @@ This is the bedrock of the citadel, ensuring all services are accessible, secure
 
 | Role | Toolchain | Purpose |
 | :--- | :--- | :--- |
-| 🚪 **Gateway** | **Cloudflare Tunnels** | The single, secure entry point for all services, handling SSL and routing. |
+| 🚪 **Gateway** | **Cloudflare Tunnels** | The single, secure entry point from the internet to the citadel. |
+| 🚦 **Dispatcher** | **Pangolin** | The internal traffic director; a reverse proxy that routes requests to the correct service. |
 | 🔑 **Vault** | **Vaultwarden** | A hardened, self-hosted vault for all my digital credentials. |
-| 🔭 **Watchtower** | **Uptime Kuma** | The vigilant eye, monitoring the health and uptime of every service. |
-| 🩺 **Physician** | **Netdata** | The citadel's physician, providing real-time, high-resolution diagnosis of system and application health. |
+| 🔭 **Sentinel** | **Uptime Kuma** | The vigilant guard, monitoring the health and uptime of every external service. |
+| 🩺 **Physician** | **Netdata** | The citadel's physician, providing real-time diagnosis of system and application health. |
+| ⚙️ **Quartermaster** | **Watchtower** | The diligent provisioner, ensuring all services are kept up-to-date with the latest secure versions. |
 | 🚢 **Helm** | **Portainer** | The command deck, providing a powerful web UI to manage the entire Docker fleet. |
 
 **➡️ [Learn more about my Infrastructure & Security setup](./docs/infrastructure-and-security.md)**
@@ -40,8 +42,8 @@ The core of my digital brain, designed for long-term knowledge retention and cre
 
 | Role | Toolchain | Purpose |
 | :--- | :--- | :--- |
-| 📚 **Library** | **Zotero + hacdias/webdav** | For collecting, organizing, and annotating high-quality source materials (PDFs, web pages). |
-| 📝 **Field Notes** | **Joplin** | For capturing, organizing, and drafting notes and ideas. The first stop for thoughts before they are synthesized. |
+| 📚 **Library** | **Zotero + hacdias/webdav** | For collecting, organizing, and annotating high-quality source materials. |
+| 📝 **Field Notes** | **Joplin** | For capturing, organizing, and drafting notes and ideas. The first stop for thoughts. |
 | 🧠 **Second Brain** | **Trilium Notes** | For synthesizing, linking, and creating my own networked knowledge base. |
 
 **➡️ [Learn more about my Knowledge Management System](./docs/knowledge-management.md)**
@@ -56,8 +58,21 @@ This layer acts as my filter and funnel for the vast ocean of online information
 | :--- | :--- | :--- |
 | 📡 **Radar** | **FreshRSS** | An active radar for high-quality information, pulling from trusted sources without algorithmic noise. |
 | 🍵 **Reading Room** | **Wallabag** | A quiet space for deep reading, stripping away distractions from articles saved for later. |
+| 🕵️ **Scout** | **ChangeDetection.io** | A vigilant scout that monitors websites for changes, providing alerts on content updates. |
 
 **➡️ [Learn more about my Information Intake Workflow](./docs/information-intake.md)**
+
+---
+
+### 📢 Publishing & Content Creation
+
+This is the citadel's public voice, where curated knowledge and original thoughts are shared with the world.
+
+| Role | Toolchain | Purpose |
+| :--- | :--- | :--- |
+| 📣 **Herald** | **Ghost** | The citadel's official voice, a modern platform for publishing articles and newsletters. |
+
+**➡️ [Learn more about my Publishing Workflow](./docs/publishing-and-content-creation.md)**
 
 ---
 
@@ -67,12 +82,12 @@ This is my private cloud, handling personal data from files to precious memories
 
 | Role | Toolchain | Purpose |
 | :--- | :--- | :--- |
-| 📦 **Sync Drive** | **Nextcloud** | The versatile workhorse for file synchronization, calendars, and contacts across all my devices. |
+| 📦 **Sync Drive** | **Nextcloud** | The versatile workhorse for file synchronization, calendars, and contacts. |
+| 🔗 **Direct Conduit** | **Syncthing** | A decentralized, peer-to-peer file synchronization service for direct data transfer between trusted devices. |
 | 🖼️ **Memories** | **Immich** | An intelligent, private gallery for a lifetime of photos and videos, with automatic mobile backup. |
 
 **➡️ [Learn more about my Personal Cloud Services](./docs/personal-cloud.md)**
 
----
 ---
 
 ### 💾 Data Orchestration & Backup
@@ -81,7 +96,7 @@ This layer represents the nervous system of my data, responsible for secure back
 
 | Role | Toolchain | Purpose |
 | :--- | :--- | :--- |
-| 🛡️ **Archivist** | **Kopia / Restic** | The master archivists, creating encrypted, deduplicated, and versioned backups of all critical data. |
+| 🛡️ **Archivist** | **Kopia / Restic / Duplicati** | The master archivists, creating encrypted, deduplicated, and versioned backups of all critical data. |
 | 🔗 **Connector** | **Rclone** | The universal translator, enabling access to a vast array of cloud storage services with a unified interface. |
 | 🪩 **Mount Point** | **CloudDrive / Openlist** | The magic gateways that mount various cloud drives as local-like folders, simplifying data access. |
 
@@ -98,8 +113,9 @@ A collection of powerful tools that enhance my digital life, from anonymous web 
 | 🎭 **Anonymous Portal** | **SearXNG** | My private gateway to the web, fetching aggregated search results without tracking. |
 | 🚀 **Hyperspace Tunnel** | **Hysteria** | A powerful, lightning-fast, and censorship-resistant proxy for unrestricted internet access. |
 | 📼 **Video Archiver** | **MeTube** | A server-side tool to permanently archive valuable videos from the web. |
+| 🧰 **Swiss Army Knife** | **IT-Tools** | A self-hosted collection of handy developer and IT utilities in a single interface. |
 | 🗃️ **Code Archive** | **Gitea** | A lightweight, fast forge for my personal code, scripts, and configurations. |
-| ⭐ **Code Curator** | **GitHub Stars Manager** | An AI-powered dashboard to automatically sync, summarize, and categorize starred GitHub repos for easy discovery and release tracking. |
+| ⭐ **Code Curator** | **GitHub Stars Manager** | An AI-powered dashboard to automatically sync, summarize, and categorize starred GitHub repos. |
 
 **➡️ [Learn more about my Utilities & Gateways](./docs/utilities-and-gateways.md)**
 

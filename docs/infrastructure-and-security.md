@@ -6,15 +6,13 @@
 
 This document provides a detailed breakdown of the philosophy, tools, and workflow behind my citadel's foundational layer, which was summarized on the main `README.md`.
 
-### The Philosophy: Zero Trust & Total Observability
+### The Philosophy: Zero Trust, Total Observability & Automated Maintenance
 
-The security and stability of the entire citadel rest on this foundation. My approach is governed by two core principles:
+The security and stability of the entire citadel rest on this foundation. My approach is governed by three core principles:
 
-1.  **Zero Trust Access**: No service is ever directly exposed to the public internet. Every request, without exception, must pass through a single, authenticated, and encrypted gateway. The internal network is treated as hostile by default.
-2.  **Total Observability**: I can't protect what I can't see. This means having a multi-faceted view of the citadel's health:
-    *   **External View (Uptime)**: Is the service reachable from the outside world?
-    *   **Internal View (Performance)**: How is the service and the underlying system performing? Are there any resource bottlenecks or anomalies?
-    *   **Management View (Control)**: Can I easily manage the lifecycle of all services?
+1.  **Zero Trust Access**: No service is ever directly exposed to the public internet. Every request must pass through a single, authenticated, and encrypted gateway.
+2.  **Total Observability**: I can't protect what I can't see. This means having a multi-faceted view of the citadel's health: from external reachability to internal performance metrics.
+3.  **Automated Maintenance**: The citadel should be self-maintaining where possible. Security patches and updates should be applied automatically to minimize the window of vulnerability.
 
 ---
 
@@ -22,20 +20,28 @@ The security and stability of the entire citadel rest on this foundation. My app
 
 #### 🚪 Gateway: [Cloudflare Tunnels](https://www.cloudflare.com/products/tunnel/)
 
-*   **Why Cloudflare Tunnels?**: It perfectly embodies the Zero Trust principle. It creates a secure, outbound-only connection from my VPS to the Cloudflare network. My server's IP address and open ports are completely hidden from the internet, eliminating a massive attack surface. It also provides world-class DDoS protection and a global CDN for free.
+*   **Why Cloudflare Tunnels?**: It perfectly embodies the Zero Trust principle. It creates a secure, outbound-only connection from my VPS to the Cloudflare network. My server's IP address and open ports are completely hidden, eliminating a massive attack surface.
+
+#### 🚦 Dispatcher: [Pangolin](https://github.com/fosrl/pangolin)
+
+*   **Why Pangolin?**: It serves as the citadel's internal traffic director. While Cloudflare Tunnels securely brings traffic *to* my server, Pangolin takes over from there. It's an enhanced Nginx reverse proxy with a simple web UI. It routes incoming requests to the correct Docker container based on the hostname, manages internal SSL, and simplifies what would otherwise be complex Nginx configuration files.
 
 #### 🔑 Vault: [Vaultwarden](https://github.com/dani-garcia/vaultwarden)
 
-*   **Why Vaultwarden?**: It's a lightweight, open-source implementation of the Bitwarden API, written in Rust. It provides all the core features I need—secure password storage, generation, and cross-device sync—without the resource overhead of the official self-hosted server. It's the master key to my entire digital life, so self-hosting it is non-negotiable.
+*   **Why Vaultwarden?**: A lightweight, open-source implementation of the Bitwarden API. It provides all the core features of a modern password manager. As the master key to my digital life, self-hosting is non-negotiable.
 
-#### 🔭 Watchtower: [Uptime Kuma](https://github.com/louislam/uptime-kuma)
+#### 🔭 Sentinel: [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 
-*   **Why Uptime Kuma?**: It provides the "external view" of my services. It's incredibly easy to set up and has a beautiful, intuitive UI. It can monitor not just HTTP(s) endpoints but also specific ports, and even check for keywords on a page. Its rich notification system ensures I'm the first to know if any part of the citadel's perimeter is breached or unresponsive.
+*   **Why Uptime Kuma?**: It provides the "external view" of my services. It's my vigilant guard, watching over every exposed service to ensure it's responsive. Its rich notification system ensures I'm the first to know if anything goes down.
 
 #### 🩺 Physician: [Netdata](https://www.netdata.cloud/)
 
-*   **Why Netdata?**: It provides the critical "internal view." While Uptime Kuma tells me *if* a service is down, Netdata tells me *why* it might be struggling. It auto-discovers and monitors everything in real-time—from the host OS's CPU and memory to the resource usage of individual Docker containers. Its high-resolution, per-second metrics are invaluable for troubleshooting performance issues. For a single-node setup, its simplicity and power far outweigh the complexity of a Prometheus/Grafana stack.
+*   **Why Netdata?**: It provides the critical "internal view." While Uptime Kuma tells me *if* a service is down, Netdata tells me *why*. It auto-discovers and monitors everything in real-time, from the host OS's CPU to individual Docker containers, which is invaluable for troubleshooting.
+
+#### ⚙️ Quartermaster: [Watchtower](https://containrrr.dev/watchtower/)
+
+*   **Why Watchtower?**: This tool embodies the "Automated Maintenance" principle. It runs in the background and constantly monitors my running Docker containers. When it detects that a new version of an image has been pushed to the registry, it automatically pulls the new image and gracefully restarts the container. This ensures I am always running the latest, most secure versions of my services with zero manual intervention.
 
 #### 🚢 Helm: [Portainer](https://www.portainer.io/)
 
-*   **Why Portainer?**: This is the command deck. While I am comfortable with the command line, Portainer's web UI provides an exceptional "management view" of my entire Docker environment. It simplifies complex tasks like deploying stacks, managing volumes and networks, and inspecting container logs. It's an indispensable tool for day-to-day operations and management.
+*   **Why Portainer?**: This is the command deck. Portainer's web UI provides an exceptional "management view" of my entire Docker environment. It simplifies complex tasks like deploying stacks, managing volumes, and inspecting container logs, making it an indispensable tool for day-to-day operations.
