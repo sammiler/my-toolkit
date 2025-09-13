@@ -40,6 +40,7 @@
 | 角色 | 工具链 | 用途 |
 | :--- | :--- | :--- |
 | 📚 **图书馆 (Library)** | **Zotero + hacdias/webdav** | 用于收集、组织和批注高质量的原始资料（PDF、网页）。 |
+| 📝 **工作台 (Workbench)** | **Joplin** | 用于捕捉、组织和起草笔记与想法。是思想在被提炼前的第一站。 |
 | 🧠 **第二大脑 (Second Brain)** | **Trilium Notes** | 用于合成、链接并创建我自己的网络化知识库。 |
 
 **➡️ [深入了解我的知识管理体系](./docs/knowledge-management_zh-CN.md)**
