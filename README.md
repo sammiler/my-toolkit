@@ -27,6 +27,7 @@ This is the bedrock of the citadel, ensuring all services are accessible, secure
 | 🚪 **Gateway** | **Cloudflare Tunnels** | The single, secure entry point for all services, handling SSL and routing. |
 | 🔑 **Vault** | **Vaultwarden** | A hardened, self-hosted vault for all my digital credentials. |
 | 🔭 **Watchtower** | **Uptime Kuma** | The vigilant eye, monitoring the health and uptime of every service. |
+| 🩺 **Physician** | **Netdata** | The citadel's physician, providing real-time, high-resolution diagnosis of system and application health. |
 | 🚢 **Helm** | **Portainer** | The command deck, providing a powerful web UI to manage the entire Docker fleet. |
 
 **➡️ [Learn more about my Infrastructure & Security setup](./docs/infrastructure-and-security.md)**

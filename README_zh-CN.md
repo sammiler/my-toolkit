@@ -27,6 +27,7 @@
 | 🚪 **网关 (Gateway)** | **Cloudflare Tunnels** | 所有服务的单一、安全入口，处理SSL和路由。 |
 | 🔑 **金库 (Vault)** | **Vaultwarden** | 一个强化的、自托管的保险库，用于存放我所有的数字凭证。 |
 | 🔭 **瞭望塔 (Watchtower)** | **Uptime Kuma** | 警惕之眼，监控每个服务的健康状况和在线时间。 |
+| 🩺 **医师 (Physician)** | **Netdata** | 城堡的医师，为系统和应用健康提供实时、高精度的诊断。 |
 | 🚢 **舵手 (Helm)** | **Portainer** | 指挥甲板，提供一个强大的Web界面来管理整个Docker舰队。 |
 
 **➡️ [深入了解我的基础设施与安全选型](./docs/infrastructure-and-security_zh-CN.md)**
