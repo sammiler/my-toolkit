@@ -18,13 +18,11 @@ I view knowledge management as a three-stage process, not just two:
 
 ### The Tools in Detail
 
-#### 📚 The Library: [Zotero](https://www.zotero.org/) & WebDAV
+#### 📚 The Library: [Zotero](https://www.zotero.org/) 
 
 *   **Zotero**: My central hub for managing all source materials.
     *   **Why Zotero?**: It's open-source, non-profit, and has an incredible browser connector for one-click capture of web pages, articles, and PDFs. It handles metadata flawlessly.
     *   **My Setup**: I use the Zotero desktop client. Metadata is synced via Zotero's free service, which is highly reliable.
-*   **hacdias/webdav**: My self-hosted backend for file storage.
-    *   **Why hacdias/webdav?**: It provides a robust WebDAV server. All my PDFs and web snapshots are synced to my own VPS via WebDAV, giving me full data ownership and unlimited storage.
 
 #### 📝 The Workbench: [Joplin](https://joplinapp.org/)
 

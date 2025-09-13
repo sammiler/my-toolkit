@@ -42,7 +42,7 @@ The core of my digital brain, designed for long-term knowledge retention and cre
 
 | Role | Toolchain | Purpose |
 | :--- | :--- | :--- |
-| 📚 **Library** | **Zotero + hacdias/webdav** | For collecting, organizing, and annotating high-quality source materials. |
+| 📚 **Library** | **Zotero + 115/NextCloud** | For collecting, organizing, and annotating high-quality source materials. |
 | 📝 **Field Notes** | **Joplin** | For capturing, organizing, and drafting notes and ideas. The first stop for thoughts. |
 | 🧠 **Second Brain** | **Trilium Notes** | For synthesizing, linking, and creating my own networked knowledge base. |
 

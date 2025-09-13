@@ -18,13 +18,11 @@
 
 ### 工具详解
 
-#### 📚 图书馆: [Zotero](https://www.zotero.org/) & WebDAV
+#### 📚 图书馆: [Zotero](https://www.zotero.org/) 
 
 *   **Zotero**: 管理所有原始资料的中央枢纽。
     *   **为何选择Zotero?**: 它是开源、非营利的，并拥有一个极其强大的浏览器插件，可以一键抓取网页、文章和PDF。它能完美处理元数据。
     *   **我的配置**: 我使用 Zotero 桌面客户端。元数据通过 Zotero 官方的免费服务同步，该服务非常可靠。
-*   **hacdias/webdav**: 我自托管的文件存储后端。
-    *   **为何选择hacdias/webdav?**: 它提供了一个健壮的 WebDAV 服务器。我所有的PDF和网页快照都通过 WebDAV 同步到我自己的VPS上，这让我拥有完全的数据所有权和无限的存储空间。
 
 #### 📝 工作台: [Joplin](https://joplinapp.org/)
 
