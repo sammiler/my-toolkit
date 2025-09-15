@@ -70,7 +70,7 @@ This is the citadel's public voice, where curated knowledge and original thought
 
 | Role | Toolchain | Purpose |
 | :--- | :--- | :--- |
-| 📣 **Herald** | **Ghost** | The citadel's official voice, a modern platform for publishing articles and newsletters. |
+| 📣 **Herald** | **Halo** | A modern open-source blog system, focused on writing and customization with themes and plugins. |
 
 **➡️ [Learn more about my Publishing Workflow](./docs/publishing-and-content-creation.md)**
 
