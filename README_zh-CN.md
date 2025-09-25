@@ -130,3 +130,17 @@
 | 🧭 **控制面板 (Control Panel)** | **Homepage** | 一个美观、高度集成的仪表盘，作为我的启动台和系统概览。 |
 
 **➡️ [深入了解我的仪表盘理念](./docs/dashboard_zh-CN.md)**
+
+---
+---
+## 💻 Development Environment
+
+我的主要编码环境设置。我注重简洁、速度，以及在不同设备上的一致体验。
+
+#### Core Editor & IDE
+*   **Editor**: [Visual Studio Code](https://code.visualstudio.com/) - My go-to for almost everything.
+    *   **Theme**: One Dark Pro Night Flat
+    *   **Font**:  Maple Mono NF
+    *   **Account**: `sammiler`
+*   **IDE**: [Visual Studio 2022 Community](https://visualstudio.microsoft.com/) - For heavy-duty C++ debugging and Windows development.
+*   **IDE (JetBrains)**: CLion / Rider (depending on the project).

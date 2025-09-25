@@ -130,3 +130,17 @@ The grand foyer of my citadel, providing a single pane of glass to access and vi
 | 🧭 **Control Panel** | **Homepage** | A beautiful, highly integrated dashboard that serves as my launchpad and system overview. |
 
 **➡️ [Learn more about my Dashboard Philosophy](./docs/dashboard.md)**
+
+---
+## 💻 Development Environment
+
+My primary setup for writing code. I value simplicity, speed, and a consistent experience across different machines.
+
+#### Core Editor & IDE
+*   **Editor**: [Visual Studio Code](https://code.visualstudio.com/) - My go-to for almost everything.
+    *   **Theme**: One Dark Pro Night Flat
+    *   **Font**:  Maple Mono NF
+    *   **Account**: `sammiler`
+*   **IDE**: [Visual Studio 2022 Community](https://visualstudio.microsoft.com/) - For heavy-duty C++ debugging and Windows development.
+*   **IDE (JetBrains)**: CLion / Rider (depending on the project).
+
